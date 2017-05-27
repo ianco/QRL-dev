@@ -1,4 +1,5 @@
 FROM python:2.7-wheezy
+RUN apt-get update && apt-get install -y telnet
 RUN pip install jsonpickle 
 RUN pip install leveldb 
 RUN pip install Twisted==16.0.0 

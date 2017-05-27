@@ -31,7 +31,12 @@ make bob_daemon
 docker ps
 ```
 
+To telnet to the daemon do the following:
 
+```
+docker exec -it bob bash
+telnet localhost 2000
+```
 
 
 
