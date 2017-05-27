@@ -11,7 +11,7 @@ I keep all my code under ~/Projects:
 cd ~
 mkdir Projects
 cd Projects
-git clone https://github.com/QRL/QRL.git
+git clone https://github.com/theQRL/QRL.git
 git clone https://github.com/ianco/QRL-dev.git
 ```
 Now cd into the QRL-dev directory and create the Docker image:
