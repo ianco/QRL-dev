@@ -38,6 +38,14 @@ docker exec -it bob bash
 telnet localhost 2000
 ```
 
+You can run a second image (alice) as follows:
+
+```
+## build and run "bob" container
+make alice_shell
+make alice_daemon
+docker ps
+```
 
 
 

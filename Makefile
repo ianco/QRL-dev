@@ -1,5 +1,6 @@
 DOCKER_RUN=docker run -d 
-DOCKER_BOB=$(DOCKER_RUN) -p 8080:8080 -p 9000:9000 -p 2000:2000 --name=bob --hostname=bob
+DOCKER_BOB=$(DOCKER_RUN) -p 8080:8080 -p 9000:9000 --name=bob --hostname=bob
+DOCKER_ALICE=$(DOCKER_RUN) -p 8081:8080 -p 9001:9000 --name=alice --hostname=alice
 
 QRL_DIR=/home/osboxes/Projects/QRL
 
@@ -19,4 +20,13 @@ bob_shell: bob_rm
 
 bob_daemon: 
 	docker exec bob $(RUN_DAEMON)
+
+alice_rm:
+	-docker rm -f alice
+
+alice_shell: alice_rm
+	$(DOCKER_ALICE) -it -v $(QRL_DIR):$(QRL_DIR) $(IMG) $(RUN_SHELL)
+
+alice_daemon: 
+	docker exec alice $(RUN_DAEMON)
 
