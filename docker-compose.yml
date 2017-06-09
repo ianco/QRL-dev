@@ -27,3 +27,45 @@ services:
     depends_on:
       - bob
 
+  charlie:
+    container_name: charlie
+    image: qrl/qrl-dev
+    expose:
+      - 2000
+      - 8080
+      - 9000
+    working_dir: /home/osboxes/Projects/QRL
+    command: python node.py
+    volumes:
+      - ./charlie/:/home/osboxes/Projects/QRL
+    depends_on:
+      - bob
+
+  donald:
+    container_name: donald
+    image: qrl/qrl-dev
+    expose:
+      - 2000
+      - 8080
+      - 9000
+    working_dir: /home/osboxes/Projects/QRL
+    command: python node.py
+    volumes:
+      - ./donald/:/home/osboxes/Projects/QRL
+    depends_on:
+      - bob
+
+  eve:
+    container_name: eve
+    image: qrl/qrl-dev
+    expose:
+      - 2000
+      - 8080
+      - 9000
+    working_dir: /home/osboxes/Projects/QRL
+    command: python node.py
+    volumes:
+      - ./eve/:/home/osboxes/Projects/QRL
+    depends_on:
+      - bob
+
