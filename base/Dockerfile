@@ -5,6 +5,7 @@ RUN pip install leveldb
 RUN pip install Twisted==16.0.0 
 RUN pip install blessings 
 RUN pip install statistics
+RUN pip install ntplib
 WORKDIR /home/osboxes/Projects/QRL
 CMD bash
 
