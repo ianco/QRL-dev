@@ -1,0 +1,29 @@
+version: '2'
+
+services:
+  bob:
+    container_name: bob
+    image: qrl/qrl-dev
+    expose:
+      - 2000
+      - 8080
+      - 9000
+    working_dir: /home/osboxes/Projects/QRL
+    command: python node.py
+    volumes:
+      - ./bob/:/home/osboxes/Projects/QRL
+
+  alice:
+    container_name: alice
+    image: qrl/qrl-dev
+    expose:
+      - 2000
+      - 8080
+      - 9000
+    working_dir: /home/osboxes/Projects/QRL
+    command: python node.py
+    volumes:
+      - ./alice/:/home/osboxes/Projects/QRL
+    depends_on:
+      - bob
+
