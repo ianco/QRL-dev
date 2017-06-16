@@ -9,7 +9,7 @@ services:
       - 8080
       - 9000
     working_dir: /home/osboxes/Projects/QRL
-    command: python node.py
+    command: python node.py -d --epoch 15 --ip 172.19.0.2
     volumes:
       - ./bob/:/home/osboxes/Projects/QRL
 
@@ -21,7 +21,7 @@ services:
       - 8080
       - 9000
     working_dir: /home/osboxes/Projects/QRL
-    command: python node.py
+    command: python node.py -d --epoch 15 --ip 172.19.0.2
     volumes:
       - ./alice/:/home/osboxes/Projects/QRL
     depends_on:
@@ -35,7 +35,7 @@ services:
       - 8080
       - 9000
     working_dir: /home/osboxes/Projects/QRL
-    command: python node.py
+    command: python node.py -d --epoch 15 --ip 172.19.0.2
     volumes:
       - ./charlie/:/home/osboxes/Projects/QRL
     depends_on:
@@ -49,7 +49,7 @@ services:
       - 8080
       - 9000
     working_dir: /home/osboxes/Projects/QRL
-    command: python node.py
+    command: python node.py -d --epoch 15 --ip 172.19.0.2
     volumes:
       - ./donald/:/home/osboxes/Projects/QRL
     depends_on:
@@ -63,7 +63,7 @@ services:
       - 8080
       - 9000
     working_dir: /home/osboxes/Projects/QRL
-    command: python node.py
+    command: python node.py -d --epoch 15 --ip 172.19.0.2
     volumes:
       - ./eve/:/home/osboxes/Projects/QRL
     depends_on:
