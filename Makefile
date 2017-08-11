@@ -5,7 +5,7 @@ QRL_DIR=/home/osboxes/Projects/QRL
 
 IMG=qrl/qrl-dev
 
-RUN_DAEMON=python node.py
+RUN_DAEMON=python main.py
 RUN_SHELL=bash
 
 build-base:
